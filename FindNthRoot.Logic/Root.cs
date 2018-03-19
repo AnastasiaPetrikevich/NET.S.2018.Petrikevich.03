@@ -45,8 +45,7 @@ namespace FindNthRoot.Logic
                 second = 1 / (double)degree * (((double)degree - 1) * first + number / Math.Pow(first, degree - 1));
 
             }
-
-            return Math.Round(second, 3);
+            return second;
         }
     }
 }
