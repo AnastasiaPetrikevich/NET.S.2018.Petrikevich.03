@@ -37,12 +37,12 @@ namespace FindNthRoot.Logic
 
 
             double first = number / degree;
-            double second = 1 / (double)degree * (((double)degree - 1) * first + number / Math.Pow(first, degree - 1));
+            double second = 1.0 / degree * ((degree - 1) * first + number / Math.Pow(first, degree - 1));
 
             while (Math.Abs(second - first) > precision)
             {
                 first = second;
-                second = 1 / (double)degree * (((double)degree - 1) * first + number / Math.Pow(first, degree - 1));
+                second = 1.0 / degree * ((degree - 1) * first + number / Math.Pow(first, degree - 1));
 
             }
             return second;
